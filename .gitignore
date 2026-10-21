@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# SDK / binaries
+e-Paper/
+e-Paper.tar.gz
+waveshare_epd/
+*.so
+
+# User uploads & rendered frames
+photos/
+uploads/
+*.jpg
+*.jpeg
+*.png
+!docs/**/*.png
+
+# Credentials — never commit real values
+*.env
+.env
+secrets/
+hostapd.local.conf
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*~

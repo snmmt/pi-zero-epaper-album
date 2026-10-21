@@ -1,0 +1,16 @@
+[Unit]
+Description=RPi Zero PhotoPainter Web Album (Flask + e-paper display)
+After=network.target wlan0-ap-ip.service
+Wants=wlan0-ap-ip.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/epd_album
+ExecStart=/usr/bin/python3 /home/pi/epd_album/app.py
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
